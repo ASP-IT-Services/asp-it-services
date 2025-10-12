@@ -187,55 +187,6 @@
             margin-top: 10px;
         }
 
-        .notify-form {
-            margin-top: 50px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .email-input {
-            padding: 18px 25px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1em;
-            width: 350px;
-            max-width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        .email-input:focus {
-            background: white;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-            transform: translateY(-2px);
-        }
-
-        .notify-btn {
-            padding: 18px 40px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1em;
-            font-weight: bold;
-            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-            color: #667eea;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
-        }
-
-        .notify-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(255, 215, 0, 0.4);
-        }
-
-        .notify-btn:active {
-            transform: translateY(0);
-        }
-
         .social-links {
             margin-top: 50px;
             display: flex;
@@ -262,31 +213,6 @@
             background: rgba(255, 255, 255, 0.3);
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .message {
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 0.95em;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .message.show {
-            opacity: 1;
-        }
-
-        .message.success {
-            background: rgba(76, 175, 80, 0.2);
-            border: 1px solid rgba(76, 175, 80, 0.5);
-            color: #c8e6c9;
-        }
-
-        .message.error {
-            background: rgba(244, 67, 54, 0.2);
-            border: 1px solid rgba(244, 67, 54, 0.5);
-            color: #ffcdd2;
         }
 
         .contact-info {
@@ -355,18 +281,6 @@
 
             .time-value {
                 font-size: 2em;
-            }
-
-            .email-input {
-                width: 100%;
-            }
-
-            .notify-btn {
-                width: 100%;
-            }
-
-            .notify-form {
-                padding: 0 20px;
             }
         }
 
@@ -446,19 +360,6 @@
             </div>
         </div>
 
-        <form class="notify-form" id="notifyForm">
-            <input 
-                type="email" 
-                class="email-input" 
-                placeholder="Enter your email address" 
-                required
-                id="emailInput"
-            >
-            <button type="submit" class="notify-btn">Notify Me</button>
-        </form>
-
-        <div class="message" id="message"></div>
-
         <div class="contact-info">
             <h3>Get In Touch</h3>
             <div class="contact-details">
@@ -503,34 +404,6 @@
         
         const countdownInterval = setInterval(updateCountdown, 1000);
         updateCountdown();
-        
-        // Handle form submission
-        document.getElementById('notifyForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const emailInput = document.getElementById('emailInput');
-            const message = document.getElementById('message');
-            
-            // Simple email validation
-            const email = emailInput.value.trim();
-            if (email && email.includes('@')) {
-                message.textContent = 'Thank you! We\'ll notify you when we launch.';
-                message.className = 'message success show';
-                emailInput.value = '';
-                
-                // Hide message after 5 seconds
-                setTimeout(() => {
-                    message.classList.remove('show');
-                }, 5000);
-            } else {
-                message.textContent = 'Please enter a valid email address.';
-                message.className = 'message error show';
-                
-                setTimeout(() => {
-                    message.classList.remove('show');
-                }, 5000);
-            }
-        });
     </script>
 </body>
 </html>
