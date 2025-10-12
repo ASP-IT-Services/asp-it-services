@@ -1,0 +1,23 @@
+{
+  "name": "asp-it-services-website",
+  "version": "1.0.0",
+  "description": "Official website of ASP IT Services",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter client dev",
+    "build": "pnpm --filter client build",
+    "lint": "pnpm --filter client lint",
+    "preview": "pnpm --filter client preview",
+    "predeploy": "pnpm --filter client build",
+    "deploy": "pnpm --filter client run deploy"
+  },
+  "keywords": [
+    "asp-it-services",
+    "website",
+    "it-services"
+  ],
+  "author": "ASP IT Services",
+  "license": "ISC",
+  "devDependencies": {}
+}
