@@ -1,6 +1,8 @@
-import { Box, Container, Typography, Button } from '@mui/material';
-import { COMPANY_NAME, COMPANY_TAGLINE } from '../constants/navigation';
+import { Box, Container, Typography, Button, Chip } from '@mui/material';
+import { COMPANY_NAME, COMPANY_TAGLINE, COMPANY_DESCRIPTION } from '../constants/navigation';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import StarIcon from '@mui/icons-material/Star';
 
 const Hero = () => {
   const handleGetStarted = () => {
@@ -133,9 +135,7 @@ const Hero = () => {
                 textShadow: '1px 1px 3px rgba(0,0,0,0.1)',
               }}
             >
-              We deliver cutting-edge IT solutions that drive business growth and
-              innovation. From web development to cloud services, we're your
-              trusted technology partner.
+              {COMPANY_DESCRIPTION}
             </Typography>
             <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
               <Button
@@ -186,6 +186,90 @@ const Hero = () => {
               >
                 Learn More
               </Button>
+            </Box>
+
+            {/* Trust Indicators */}
+            <Box
+              sx={{
+                display: 'flex',
+                gap: 2,
+                flexWrap: 'wrap',
+                mt: 3,
+                animation: 'fadeIn 1s ease-out 0.5s both',
+                '@keyframes fadeIn': {
+                  '0%': {
+                    opacity: 0,
+                  },
+                  '100%': {
+                    opacity: 1,
+                  },
+                },
+              }}
+            >
+              <Chip
+                icon={<StarIcon sx={{ fontSize: '1rem' }} />}
+                label="4.9/5 Rating"
+                sx={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                  color: '#667eea',
+                  fontWeight: 600,
+                  fontSize: '0.95rem',
+                  py: 2.5,
+                  px: 1,
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                  '& .MuiChip-icon': {
+                    color: '#FFA500',
+                  },
+                }}
+              />
+              <Chip
+                icon={<CheckCircleIcon sx={{ fontSize: '1rem' }} />}
+                label="500+ Projects"
+                sx={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                  color: '#667eea',
+                  fontWeight: 600,
+                  fontSize: '0.95rem',
+                  py: 2.5,
+                  px: 1,
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                  '& .MuiChip-icon': {
+                    color: '#4CAF50',
+                  },
+                }}
+              />
+              <Chip
+                icon={<CheckCircleIcon sx={{ fontSize: '1rem' }} />}
+                label="ISO Certified"
+                sx={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                  color: '#667eea',
+                  fontWeight: 600,
+                  fontSize: '0.95rem',
+                  py: 2.5,
+                  px: 1,
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                  '& .MuiChip-icon': {
+                    color: '#4CAF50',
+                  },
+                }}
+              />
+              <Chip
+                icon={<CheckCircleIcon sx={{ fontSize: '1rem' }} />}
+                label="24/7 Support"
+                sx={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                  color: '#667eea',
+                  fontWeight: 600,
+                  fontSize: '0.95rem',
+                  py: 2.5,
+                  px: 1,
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                  '& .MuiChip-icon': {
+                    color: '#4CAF50',
+                  },
+                }}
+              />
             </Box>
           </Box>
           <Box
