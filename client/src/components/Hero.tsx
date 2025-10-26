@@ -240,22 +240,6 @@ const Hero = () => {
               />
               <Chip
                 icon={<CheckCircleIcon sx={{ fontSize: '1rem' }} />}
-                label="ISO Certified"
-                sx={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                  color: '#667eea',
-                  fontWeight: 600,
-                  fontSize: '0.95rem',
-                  py: 2.5,
-                  px: 1,
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-                  '& .MuiChip-icon': {
-                    color: '#4CAF50',
-                  },
-                }}
-              />
-              <Chip
-                icon={<CheckCircleIcon sx={{ fontSize: '1rem' }} />}
                 label="24/7 Support"
                 sx={{
                   backgroundColor: 'rgba(255, 255, 255, 0.95)',
