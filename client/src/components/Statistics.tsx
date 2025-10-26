@@ -141,25 +141,25 @@ const Statistics = () => {
         >
           <StatCard
             icon={<WorkIcon sx={{ fontSize: 32, color: 'primary.main' }} />}
-            value={500}
+            value={70}
             suffix="+"
             label="Projects Completed"
           />
           <StatCard
             icon={<PeopleIcon sx={{ fontSize: 32, color: 'primary.main' }} />}
-            value={200}
+            value={50}
             suffix="+"
             label="Happy Clients"
           />
           <StatCard
             icon={<TrendingUpIcon sx={{ fontSize: 32, color: 'primary.main' }} />}
-            value={10}
+            value={5}
             suffix="+"
             label="Years of Excellence"
           />
           <StatCard
             icon={<StarIcon sx={{ fontSize: 32, color: 'primary.main' }} />}
-            value={98}
+            value={99.9}
             suffix="%"
             label="Client Satisfaction"
           />

@@ -4,14 +4,15 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import StarIcon from '@mui/icons-material/Star';
+import ankitKumarPhoto from '../assets/ankit-kumar-asp-it-services.jpg';
 
 const aboutPoints = [
-  'Over 3 years of company experience',
+  'Over 5 years of industry experience',
   'Team of certified IT professionals',
   'Cutting-edge technology solutions',
   'Client-focused approach',
   'Proven track record of success',
-  '24/7 customer support',
+  'Continued Post-Launch Support',
 ];
 
 const timeline = [
@@ -200,18 +201,28 @@ const About = () => {
                 gap: 2,
               }}
             >
-              <Avatar
+              <Box
                 sx={{
                   width: 200,
                   height: 200,
-                  bgcolor: 'primary.main',
-                  fontSize: '4rem',
-                  fontWeight: 700,
-                  boxShadow: '0 8px 24px rgba(33, 150, 243, 0.3)',
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                  boxShadow: '0 8px 24px rgba(63, 81, 181, 0.3)',
+                  border: '4px solid white',
                 }}
               >
-                AK
-              </Avatar>
+                <Box
+                  component="img"
+                  src={ankitKumarPhoto}
+                  alt="Ankit Kumar - Founder & CEO of ASP IT Services"
+                  sx={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center 20%', // Adjust this value: 0% = top, 50% = center, 100% = bottom
+                  }}
+                />
+              </Box>
               <Typography
                 variant="h6"
                 sx={{ fontWeight: 700, color: '#1a202c' }}
