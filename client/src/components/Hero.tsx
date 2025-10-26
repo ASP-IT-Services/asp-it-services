@@ -24,7 +24,7 @@ const Hero = () => {
         overflow: 'hidden',
       }}
     >
-      {/* Curvy Gradient Background */}
+      {/* Professional Navy Gradient Background */}
       <Box
         sx={{
           position: 'absolute',
@@ -40,7 +40,7 @@ const Hero = () => {
             left: '-10%',
             width: '120%',
             height: '120%',
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)',
+            background: 'linear-gradient(135deg, #3f51b5 0%, #5c6bc0 50%, #7986cb 100%)',
             borderRadius: '0 0 50% 50% / 0 0 20% 20%',
             transform: 'rotate(-5deg)',
             animation: 'waveAnimation 8s ease-in-out infinite',
@@ -60,7 +60,7 @@ const Hero = () => {
             right: '-10%',
             width: '80%',
             height: '100%',
-            background: 'linear-gradient(225deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%)',
+            background: 'linear-gradient(225deg, rgba(63, 81, 181, 0.3) 0%, rgba(92, 107, 192, 0.3) 100%)',
             borderRadius: '50% 50% 0 0 / 20% 20% 0 0',
             transform: 'rotate(5deg)',
             animation: 'waveAnimation2 10s ease-in-out infinite',
