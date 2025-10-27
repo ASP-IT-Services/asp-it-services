@@ -45,7 +45,7 @@ const Header = () => {
           p: 2,
         }}
       >
-        <Logo variant="header" />
+        <Logo variant="light" />
         <IconButton onClick={handleDrawerToggle}>
           <CloseIcon />
         </IconButton>
@@ -78,7 +78,7 @@ const Header = () => {
       >
         <Toolbar className="max-w-7xl mx-auto w-full">
           <Box sx={{ flexGrow: 1 }}>
-            <Logo variant="header" onClick={() => handleNavClick('#home')} />
+            <Logo variant="light" onClick={() => handleNavClick('#home')} />
           </Box>
 
           {isMobile ? (

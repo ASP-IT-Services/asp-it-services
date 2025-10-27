@@ -76,10 +76,7 @@ const Contact = () => {
                   Email
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  info@aspitservices.com
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  support@aspitservices.com
+                  info@aspit.services
                 </Typography>
               </Box>
             </Box>

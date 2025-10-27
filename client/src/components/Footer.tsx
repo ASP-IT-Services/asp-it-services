@@ -40,7 +40,7 @@ const Footer = () => {
           }}
         >
           <Box>
-            <Logo variant="footer" />
+            <Logo variant="dark" />
             <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.7)', mt: 2 }}>
               Transforming businesses through innovative IT solutions and
               exceptional service delivery.

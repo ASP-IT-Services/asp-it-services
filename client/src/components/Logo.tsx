@@ -1,50 +1,43 @@
-import { Box, Typography } from '@mui/material';
-import { COMPANY_NAME } from '../constants/navigation';
+import { Box } from "@mui/material";
+import darkLogo from '../assets/logos/asp-it-services-dark.png';
+import lightLogo from '../assets/logos/asp-it-services-light.png';
 
 interface LogoProps {
-  variant?: 'header' | 'footer';
+  variant?: 'light' | 'dark';
   onClick?: () => void;
+  height?: number;
 }
 
-const Logo = ({ variant = 'header', onClick }: LogoProps) => {
-  const isHeader = variant === 'header';
+const Logo = ({ 
+  onClick, 
+  variant = 'light',
+  height = 90
+}: LogoProps) => {
+  // Use light logo for light variant, dark logo for dark variant
+  const logoSrc = variant === 'light' ? lightLogo : darkLogo;
   
   return (
     <Box
       onClick={onClick}
       sx={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 1.5,
         cursor: onClick ? 'pointer' : 'default',
-        transition: 'opacity 0.3s',
+        display: 'inline-block',
+        transition: 'opacity 0.2s ease',
         '&:hover': onClick ? {
-          opacity: 0.8,
-        } : {},
+          opacity: 0.8
+        } : {}
       }}
+      className="p-2"
     >
-      <Box
-        component="img"
-        src="https://placehold.co/40x40/2196f3/white?text=ASP"
-        alt={`${COMPANY_NAME} Logo`}
-        sx={{
-          width: isHeader ? 40 : 32,
-          height: isHeader ? 40 : 32,
-          borderRadius: 1,
-          objectFit: 'cover',
+      <img 
+        src={logoSrc} 
+        alt="ASP IT Services Logo" 
+        style={{
+          width: 'auto',
+          height: `${height}px`,
+          display: 'block'
         }}
       />
-      <Typography
-        variant={isHeader ? 'h6' : 'body1'}
-        component="div"
-        sx={{
-          fontWeight: 700,
-          color: isHeader ? 'primary.main' : 'white',
-          display: { xs: isHeader ? 'none' : 'block', sm: 'block' },
-        }}
-      >
-        {COMPANY_NAME}
-      </Typography>
     </Box>
   );
 };
