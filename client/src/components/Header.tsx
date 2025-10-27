@@ -10,6 +10,7 @@ import {
   ListItemButton,
   ListItemText,
   Box,
+  Container,
   useMediaQuery,
   useTheme,
 } from '@mui/material';
@@ -76,10 +77,16 @@ const Header = () => {
           boxShadow: 'none',
         }}
       >
-        <Toolbar className="max-w-7xl mx-auto w-full">
-          <Box sx={{ flexGrow: 1 }}>
-            <Logo variant="light" onClick={() => handleNavClick('#home')} />
-          </Box>
+        <Container maxWidth="lg">
+          <Toolbar 
+            disableGutters
+            sx={{
+              minHeight: { xs: 64, sm: 70 },
+            }}
+          >
+            <Box sx={{ flexGrow: 1 }}>
+              <Logo variant="light" onClick={() => handleNavClick('#home')} />
+            </Box>
 
           {isMobile ? (
             <IconButton
@@ -109,7 +116,8 @@ const Header = () => {
               ))}
             </Box>
           )}
-        </Toolbar>
+          </Toolbar>
+        </Container>
       </AppBar>
       <Drawer
         variant="temporary"

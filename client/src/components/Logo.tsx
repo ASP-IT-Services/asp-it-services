@@ -27,7 +27,6 @@ const Logo = ({
           opacity: 0.8
         } : {}
       }}
-      className="p-2"
     >
       <img 
         src={logoSrc} 
