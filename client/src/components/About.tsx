@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Button, Avatar, Chip } from '@mui/material';
+import { Box, Container, Typography, Button, Chip } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import SchoolIcon from '@mui/icons-material/School';
